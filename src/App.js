@@ -1,10 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import ProcessPage from './ProcessPage';
 import StartPage from './StartPage';
 
 function App() {
   return (
     <>
-      <StartPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<StartPage />} />
+          <Route path="/processpage" element={<ProcessPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
